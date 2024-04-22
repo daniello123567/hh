@@ -22,12 +22,13 @@ function App() {
     // const key =
 
     // console.log(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)
+    const token = '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';
 
     const fetchInfo = async () => {
       try {
         const res = await fetch(`https://api.github.com/users/${user}/repos`, {
           headers: {
-            Authorization: `Bearer ${process.env.API_URL}`,
+            Authorization: `Bearer ${token}`,
           },
         });
         const data = await res.json();
