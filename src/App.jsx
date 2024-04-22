@@ -21,14 +21,13 @@ function App() {
   useEffect(() => {
     // const key =
 
-    // console.log(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)
-    const token = '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';
+    //
 
     const fetchInfo = async () => {
       try {
         const res = await fetch(`https://api.github.com/users/${user}/repos`, {
           headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: `Bearer ${import.meta.env.VITE_KEYS}`,
           },
         });
         const data = await res.json();
