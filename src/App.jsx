@@ -27,7 +27,7 @@ function App() {
       try {
         const res = await fetch(`https://api.github.com/users/${user}/repos`, {
           headers: {
-            Authorization: `Bearer ${import.meta.env.VITE_KEYS}`,
+            Authorization: `Bearer ${process.env.VITE_KEYS}`,
           },
         });
         const data = await res.json();
