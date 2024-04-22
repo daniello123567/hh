@@ -21,13 +21,13 @@ function App() {
   useEffect(() => {
     // const key =
 
-    console.log(import.meta.env.VITE_KEYS)
+    // console.log(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)
 
     const fetchInfo = async () => {
       try {
         const res = await fetch(`https://api.github.com/users/${user}/repos`, {
           headers: {
-            Authorization: `Bearer ${import.meta.env.VITE_KEYS}`,
+            Authorization: `Bearer ${process.env.API_URL}`,
           },
         });
         const data = await res.json();
