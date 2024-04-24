@@ -26,7 +26,7 @@ function App() {
     const fetchInfo = async () => {
       try {
         const res = await fetch(`https://api.github.com/users/${user}/repos`, {
-          headers: {
+          header: {
             Authorization: `Bearer ${import.meta.env.VITE_KEYS}`,
           },
         });
